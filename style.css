@@ -23,10 +23,10 @@ path{
 .wrapper{
     display: grid;
     grid-template-columns: minmax(100px , 300px) auto auto;
-    grid-template-rows: 20vh 80vh;
+    grid-template-rows: auto 1fr;
     min-height: 100vh;
 }
-aside{
+.navigation{
     display: flex;
     flex-direction: column;
     background-color: #0284c7;
@@ -36,25 +36,6 @@ aside{
     gap: 2rem;
 
 }
-header{
-    background-color:#f8fafc;
-    grid-column: span 2;
-    height: 100%;
-    box-shadow: 0px 10px 10px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-main{
-    background-color:#cbd5e1;
-    grid-column: span 2;
-    height: 100%
-}
-.title{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.4rem;
-}
-
 .nav-item{
     cursor: pointer;
     display: flex;
@@ -69,4 +50,98 @@ main{
 .nav-item svg{
     height: 26px;
     width: 26px;
+}
+header{
+    background-color:#f8fafc;
+    grid-column: span 2;
+    height: 100%;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.4rem;
+}
+
+
+.header-top,.header-bottom{
+    display: flex;
+    width: 90%;
+    padding: 10px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.search-bar svg, .user-info svg{
+    height: 26px;
+    width: 26px;
+}
+.search-bar path, .user-info path{
+    fill: rgba(0,0,0,1);
+}
+.search-bar{
+    display: flex;
+    width: 60%;
+    gap: 10px;
+    align-items: center;
+}
+#search{
+    border: none;
+    outline: none;
+    background-color:#cbd5e1;
+    border-radius: 20px;
+    padding: 10px;
+    flex: 1;
+}
+.user-info,.user-info-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+.image-round{
+    display: inline-block;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+.image-round-l{
+    display: inline-block;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+}
+.message{
+    font-size: 1rem;
+}
+.user-name{
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+}
+.button-group{
+    display: flex;
+    gap: 40px;
+    justify-content: space-evenly;
+}
+.btn-primary{
+    display: inline-block;
+    background-color: #0284c7;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+main{
+    background-color:#cbd5e1;
+    grid-column: span 2;
+    height: 100%
 }
